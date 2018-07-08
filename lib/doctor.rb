@@ -16,15 +16,8 @@ class Doctor
   def appointments
     Appointment.all.select {|appointment| appointment.doctor == self}
   end
-  
-  # describe "#patients" do
-  #   it "has many patients, through appointments" do
-  #     doctor_who = Doctor.new("The Doctor")
-  #     hevydevy = Patient.new("Devin Townsend")
-  #     doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
-  #     expect(doctor_who.patients).to include(hevydevy)
 
-    def patients
+  def patients
     Appointment.all.collect {|appointment| appointment.patient}
   end
   
