@@ -17,14 +17,6 @@ class Doctor
     Appointment.all.select {|appointment| appointment.doctor == self}
   end
   
-  # def genres
-  #   Song.all.collect {|song| song.genre}
-  # end
-  
-  # def new_song(name, genre)
-  #   Song.new(name, self/artist, genre)
-  # end
-  
   def patients
     Appointment.all.collect {|appointment| appointment.patient}
   end
