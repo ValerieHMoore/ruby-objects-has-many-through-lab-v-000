@@ -17,10 +17,6 @@ class Patient
     Appointment.all.select {|appointment| appointment.patient == self}
   end
   
-  # def artists
-  #   Song.all.collect {|song| song.artist}
-  # end
-  
   # def new_song(name, artist)
   #   Song.new(name, artist, self)
   # end
